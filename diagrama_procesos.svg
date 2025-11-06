@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2200" viewBox="0 0 1400 2200">
+  <style>
+    .lane { fill: #f7f7f7; stroke: #d0d0d0; }
+    .box { fill: #ffffff; stroke: #2b6cb0; stroke-width:2; rx:8; }
+    .box-alt { fill: #fffdfa; stroke: #2f855a; stroke-width:2; rx:8; }
+    .title { font: 700 18px sans-serif; fill: #222; }
+    .label { font: 600 14px sans-serif; fill: #111; }
+    .small { font: 14px sans-serif; fill: #333; }
+    .arrow { stroke:#333; stroke-width:2; fill:none; marker-end:url(#arrowhead); }
+    .lane-title { font: 700 16px sans-serif; fill: #333; }
+    .legend { font: 14px sans-serif; fill: #111; }
+    .note { font: 13px sans-serif; fill:#555; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="1360" height="64" fill="#0b6cb0" rx="8" />
+  <text x="40" y="60" class="title" fill="#fff">Diagrama de procesos - Comercialización, Logística y Empacado (Maransa S.A.S)</text>
+
+  <!-- Swimlanes (departamentos) -->
+  <g transform="translate(20,110)">
+    <!-- lane backgrounds -->
+    <rect class="lane" x="0" y="0" width="1360" height="180" />
+    <rect class="lane" x="0" y="200" width="1360" height="180" />
+    <rect class="lane" x="0" y="400" width="1360" height="180" />
+    <rect class="lane" x="0" y="600" width="1360" height="180" />
+    <rect class="lane" x="0" y="800" width="1360" height="420" />
+    <rect class="lane" x="0" y="1240" width="1360" height="180" />
+    <rect class="lane" x="0" y="1440" width="1360" height="420" />
+
+    <!-- lane titles -->
+    <text x="16" y="28" class="lane-title">Comercialización / Compras</text>
+    <text x="16" y="228" class="lane-title">Laboratorio</text>
+    <text x="16" y="428" class="lane-title">Logística / Transporte</text>
+    <text x="16" y="628" class="lane-title">Custodia</text>
+    <text x="16" y="828" class="lane-title">Empacadora / Procesamiento</text>
+    <text x="16" y="1248" class="lane-title">Producción (Piscicultura propia)</text>
+    <text x="16" y="1460" class="lane-title">Administración / Facturación / Exportación</text>
+
+    <!-- Comercialización boxes -->
+    <rect class="box" x="300" y="12" width="760" height="80" />
+    <text x="340" y="44" class="label">Visita al cliente y evaluación organoléptica</text>
+    <text x="340" y="64" class="small">Textura • Color • Olor • Sabor • Decisión: Aprobar / Rechazar</text>
+
+    <rect class="box" x="60" y="110" width="220" height="60" />
+    <text x="80" y="142" class="label">Documento: Solicitud / Pedido</text>
+
+    <!-- Flecha a Laboratorio -->
+    <path class="arrow" d="M700 92 L700 140" />
+
+    <!-- Laboratorio boxes -->
+    <rect class="box" x="300" y="200" width="760" height="80" />
+    <text x="340" y="232" class="label">Muestreo y análisis de laboratorio</text>
+    <text x="340" y="252" class="small">Resultado: Aprobado / Rechazado • Certificados</text>
+
+    <rect class="box-alt" x="60" y="270" width="220" height="60" />
+    <text x="80" y="302" class="label">Registro de muestra (ID_muestra)</text>
+
+    <!-- Flechas desde laboratorio -->
+    <path class="arrow" d="M700 280 L700 330" />
+
+    <!-- Logística boxes -->
+    <rect class="box" x="300" y="400" width="760" height="80" />
+    <text x="340" y="432" class="label">Programar volumen (libras) y coordinar transporte</text>
+    <text x="340" y="452" class="small">Asignar vehículo: furgón, tanques, oxígeno (si vivo)</text>
+
+    <rect class="box" x="60" y="480" width="220" height="60" />
+    <text x="80" y="512" class="label">Preparar vehículo & conductor</text>
+
+    <!-- Flecha a Custodia -->
+    <path class="arrow" d="M700 480 L700 540" />
+
+    <!-- Custodia boxes -->
+    <rect class="box" x="300" y="600" width="760" height="80" />
+    <text x="340" y="632" class="label">Custodia: recogida y acompañamiento del cargamento</text>
+    <text x="340" y="652" class="small">Ruta de custodia: ejemplo Guayas / Durán • Registro de incidencias</text>
+
+    <!-- Flecha a Empacadora -->
+    <path class="arrow" d="M700 680 L700 740" />
+
+    <!-- Empacadora boxes (multiple pasos) -->
+    <rect class="box" x="60" y="820" width="520" height="100" />
+    <text x="80" y="860" class="label">Recepción: Apertura de furgones y conteo</text>
+    <text x="80" y="880" class="small">Verificar cantidad, peso y condiciones</text>
+
+    <rect class="box" x="820" y="820" width="540" height="100" />
+    <text x="860" y="860" class="label">Análisis del laboratorio de empacadora</text>
+    <text x="860" y="880" class="small">Decisión: Acepta / Rechaza • Reporte</text>
+
+    <!-- Flechas entre recepción y análisis -->
+    <path class="arrow" d="M580 880 L820 880" />
+
+    <rect class="box" x="60" y="950" width="600" height="120" />
+    <text x="80" y="990" class="label">Clasificación y procesamiento</text>
+    <text x="80" y="1010" class="small">Tipo: Cola / Parentero / Vivo • Empacado y congelado en máster</text>
+
+    <rect class="box" x="700" y="950" width="660" height="120" />
+    <text x="740" y="990" class="label">Empacado final y preparación para exportación</text>
+    <text x="740" y="1010" class="small">Número de máster, destino, documentación de calidad</text>
+
+    <!-- Flecha hacia Administración -->
+    <path class="arrow" d="M950 1070 L950 1220" />
+
+    <!-- Producción propia (piscinas) -->
+    <rect class="box-alt" x="300" y="1240" width="760" height="80" />
+    <text x="340" y="1272" class="label">Producción propia: cosecha en piscinas</text>
+    <text x="340" y="1292" class="small">Se envía bajo responsabilidad interna; cálculo de costos</text>
+
+    <path class="arrow" d="M700 1320 L700 1360" />
+
+    <!-- Administración / Facturación -->
+    <rect class="box" x="300" y="1440" width="760" height="140" />
+    <text x="340" y="1480" class="label">Administración / Facturación / Exportación</text>
+    <text x="340" y="1500" class="small">Generar factura, registro de costos, documentos de exportación, seguimiento de pago</text>
+
+    <rect class="box" x="60" y="1620" width="220" height="60" />
+    <text x="80" y="1652" class="label">Registro de trazabilidad (historial por lote)</text>
+
+    <rect class="box" x="300" y="1620" width="760" height="120" />
+    <text x="340" y="1660" class="label">Salida: Envío a compradores / mercado</text>
+    <text x="340" y="1680" class="small">Confirmación entrega • Cierre de lote • Archivo de certificados</text>
+
+    <!-- Legend and notes -->
+    <rect x="60" y="1800" width="1200" height="340" fill="#fff" stroke="#ccc" rx="8" />
+    <text x="80" y="1830" class="legend">Leyenda y notas:</text>
+    <text x="80" y="1860" class="note">• Aprobado/Rechazado: puntos de decisión críticos (comercial y laboratorios).</text>
+    <text x="80" y="1884" class="note">• Custodia: departamento interno que acompaña desde recolección hasta empacadora o destino.</text>
+    <text x="80" y="1908" class="note">• Camarón vivo: exige tanques de oxígeno y tiempos máximos de transporte.</text>
+    <text x="80" y="1932" class="note">• Campos mínimos para el sistema: pedidos, inspecciones, muestras, transporte, recepción, facturación, incidencias.</text>
+    <text x="80" y="1956" class="note">• Este diagrama resume el flujo principal. Puedo generar una versión PDF/PNG o un diagrama editable (draw.io) si quieres.</text>
+
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+flowchart TD
+  A[Inicio: Visita Comercial] --> B{Inspección organoléptica}
+  B -- Aprobado --> C[Muestreo para laboratorio]
+  B -- Rechazado --> Z[Fin: No compra]
+  C --> D{Resultado laboratorio}
+  D -- Aprobado --> E[Programar libras y coordinar logística]
+  D -- Rechazado --> Z
+  E --> F[Preparar vehículo (furgón/tanques/oxígeno)]
+  F --> G[Enviar a camaronera / pesca]
+  G --> H[Pesca / Cosecha (6-7h)]
+  H --> I[Confirmar volumen y llamar a Custodia]
+  I --> J[Custodia recoge y acompaña al destino]
+  J --> K[Llegada a Empacadora]
+  K --> L[Apertura furgones: Control de calidad y conteo]
+  L --> M[Empacadora hace su propio análisis de laboratorio]
+  M -- Acepta --> N[Clasificar por tipo (cola/parentero/vivo)]
+  M -- Rechaza --> O[Registro de incidencia / devolución]
+  N --> P[Procesamiento: congelado y empacado en máster]
+  P --> Q[Preparar para exportación / Envío a compradores]
+  Q --> R[Fin: Entregado al mercado]
+  S[Producción propia (piscinas)] --> E2[Control interno y cálculo de costos]
+  E2 --> K
