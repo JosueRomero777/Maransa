@@ -16,6 +16,24 @@ Este repositorio contiene un diagrama y la documentación inicial de los proceso
 	- Realizan evaluación organoléptica: textura, color, olor, sabor.
 	- Resultado: decidir si el lote puede comprarse/ser exportado o se rechaza.
 
+# Maransa
+
+## Diagrama de procesos — Comercialización, Logística y Empacado
+
+![Diagrama de procesos](./diagrama_procesos.svg)
+
+> Si el SVG no se renderiza en tu visor, abre `diagrama_procesos.html` o `diagrama_procesos.svg` en el navegador.
+
+## Resumen
+Este repositorio contiene un diagrama y la documentación inicial de los procesos de la empresa Maransa S.A.S relacionados con la comercialización, logística, control de calidad (laboratorio), custodia, empacado y exportación de camarón. El objetivo es disponer de una visión clara para diseñar un sistema de logística y facturación.
+
+## Descripción detallada de los procesos
+
+1. Comercialización / Inspección in situ
+	- El equipo comercial visita la camaronera o cliente.
+	- Realizan evaluación organoléptica: textura, color, olor, sabor.
+	- Resultado: decidir si el lote puede comprarse/ser exportado o se rechaza.
+
 2. Muestreo y análisis de laboratorio
 	- Si la inspección inicial es favorable, se toma una muestra y se envía al laboratorio.
 	- El laboratorio analiza parámetros sanitarios y de calidad.

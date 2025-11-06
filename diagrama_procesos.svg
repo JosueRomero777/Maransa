@@ -70,8 +70,8 @@
     <text x="340" y="432" class="label">Programar volumen (libras) y coordinar transporte</text>
     <text x="340" y="452" class="small">Asignar vehículo: furgón, tanques, oxígeno (si vivo)</text>
 
-    <rect class="box" x="60" y="480" width="220" height="60" />
-    <text x="80" y="512" class="label">Preparar vehículo & conductor</text>
+  <rect class="box" x="60" y="480" width="220" height="60" />
+  <text x="80" y="512" class="label">Preparar vehículo &amp; conductor</text>
 
     <!-- Flecha a Custodia -->
     <path class="arrow" d="M700 480 L700 540" />
@@ -121,7 +121,6 @@
 
     <rect class="box" x="60" y="1620" width="220" height="60" />
     <text x="80" y="1652" class="label">Registro de trazabilidad (historial por lote)</text>
-
     <rect class="box" x="300" y="1620" width="760" height="120" />
     <text x="340" y="1660" class="label">Salida: Envío a compradores / mercado</text>
     <text x="340" y="1680" class="small">Confirmación entrega • Cierre de lote • Archivo de certificados</text>
